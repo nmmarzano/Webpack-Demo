@@ -1,8 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'Output Management',
+        }),
+    ],
     entry: {
         app: './src/index.js',
         print: './src/print.js',
