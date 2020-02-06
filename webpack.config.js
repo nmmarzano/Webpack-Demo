@@ -19,7 +19,7 @@ module.exports = {
                 ],
             },
             {
-                test: /.s[ac]ss$/,
+                test: /\.s[ac]ss$/,
                 use: [
                     'style-loader',
                     'css-loader',
@@ -27,10 +27,17 @@ module.exports = {
                 ],
             },
             {
-                test: /.(png|gif|svg|jpe?g|ico)$/,
+                test: /\.(png|gif|svg|jpe?g|ico)$/,
                 loader: 'file-loader',
                 options: {
                     outputPath: 'assets/img',
+                },
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)$/,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'assets/fonts',
                 },
             },
         ],

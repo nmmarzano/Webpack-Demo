@@ -1,4 +1,12 @@
+@font-face {
+    font-family: 'Encode-Sans';
+    src: url('./EncodeSans-Regular.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 .hello {
     color: red;
+    font-family: 'Encode-Sans';
     background: url('./logo_bp.ico');
 }
