@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import './style.scss';
-import Logo from './logo_bp.png';
+import Logo from './logo_bp.ico';
 
 function component() {
     const element = document.createElement('div');

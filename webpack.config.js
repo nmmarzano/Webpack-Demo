@@ -27,10 +27,11 @@ module.exports = {
                 ],
             },
             {
-                test: /.(png|gif|svg|jpg|jpeg|ico)$/,
-                use: [
-                    'file-loader',
-                ],
+                test: /.(png|gif|svg|jpe?g|ico)$/,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'assets/img',
+                },
             },
         ],
     },
