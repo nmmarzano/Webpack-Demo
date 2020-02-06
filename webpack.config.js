@@ -40,6 +40,18 @@ module.exports = {
                     outputPath: 'assets/fonts',
                 },
             },
+            {
+                test: /\.(csv|tsv)$/,
+                use: [
+                    'csv-loader',
+                ],
+            },
+            {
+                test: /\.xml$/,
+                use: [
+                    'xml-loader',
+                ],
+            },
         ],
     },
 };

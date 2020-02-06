@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import './style.scss';
-import Logo from './logo_bp.ico';
+import Icon from './logo_bp.ico';
+import XmlData from './data.xml';
+import CsvData from './data.csv';
 
 function component() {
     const element = document.createElement('div');
@@ -8,10 +10,13 @@ function component() {
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
     element.classList.add('hello');
 
-    const myLogo = new Image();
-    myLogo.src = Logo;
+    const myIcon = new Image();
+    myIcon.src = Icon;
 
-    element.appendChild(myLogo);
+    element.appendChild(myIcon);
+
+    console.log('XmlData', XmlData);
+    console.log('CsvData', CsvData);
 
     return element;
 }
