@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'bundle.js',
+        filename: 'js/bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
@@ -21,6 +21,12 @@ module.exports = {
                     'style-loader',
                     'css-loader',
                     'sass-loader',
+                ],
+            },
+            {
+                test: /.(png|gif|svg|jpg|jpeg|ico)$/,
+                use: [
+                    'file-loader',
                 ],
             },
         ],
