@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     plugins: [
@@ -10,6 +11,7 @@ module.exports = {
             title: 'Output Management',
         }),
         new CleanWebpackPlugin(),
+        new ManifestPlugin(),
     ],
     entry: {
         app: './src/index.js',
