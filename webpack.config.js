@@ -11,7 +11,10 @@ module.exports = {
             title: 'Output Management',
         }),
         new CleanWebpackPlugin(),
-        new ManifestPlugin(),
+        new ManifestPlugin({
+            publicPath: 'webpack-demo/',
+            basePath: 'src/',
+        }),
     ],
     entry: {
         app: './src/index.js',
