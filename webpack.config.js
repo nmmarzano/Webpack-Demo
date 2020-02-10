@@ -18,6 +18,9 @@ module.exports = {
         }),
     ],
     devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist',
+    },
     entry: {
         app: './src/index.js',
         print: './src/print.js',
